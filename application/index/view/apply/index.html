@@ -1,0 +1,443 @@
+{extend name="index:base" /}
+{block name="title"}<?php echo $xml->index->index_title;?>{/block}
+
+{block name="content"}
+{include file="index/left" /}
+<style>
+    input {
+        border:0px;
+
+    }
+</style>
+<script>
+    $(function(){
+        $('.db_n').eq(0).addClass('act');
+    })
+
+</script>
+<link rel="stylesheet" type="text/css" href="__CSS__main.css" charset="utf-8"/>
+<script type="text/javascript" src="__JS__apply.js"></script>
+<div class="apply_div1 ad1">
+    <ul class="ul1">
+        <li><?php echo $xml->apply->apply_menu1;?></li>
+        <li><?php echo $xml->apply->apply_menu2;?></li>
+        <li><?php echo $xml->apply->apply_menu3;?></li>
+        <li><?php echo $xml->apply->apply_menu4;?></li>
+        <li><?php echo $xml->apply->apply_menu5;?></li>
+    </ul>
+    <ul class="ul2 ajx">
+        {volist name="ticket" id="v"}
+        <li class="click_hand stye{$v.type} id sty2" checkid="{$v.uid}" no="{$v.applyNo}">{$v.applyNo}</li>
+        <li>{$v.price}</li>
+        <li>{$v.updateTime}</li>
+        <li>
+            {switch name="$v.applyPass"}
+            {case value="1"}已审核{/case}
+            {case value="2"}已驳回{/case}
+            {default /}待审核
+            {/switch}
+        </li>
+        <li>{$v.name}</li>
+        <li class="click_hand ap_pass" pno="{$v.ticketNo}"><?php echo $xml->apply->apply_content1;?></li>
+        <li class="click_hand ap_nopass" npno="{$v.ticketNo}"><?php echo $xml->apply->apply_content2;?></li>
+        <li class="click_hand d1_explain" d1_epno="{$v.applyNo}"><?php echo $xml->apply->apply_content3;?></li>
+        <li class="click_hand csty3" ycheckid="{$v.uid}" vappno="{$v.applyNo}"><?php echo $xml->apply->apply_content4;?></li>
+        {/volist}
+
+    </ul>
+</div>
+
+<!--通过 不通过  样式2-->
+<div class="apply_div2 ad2">
+    <ul class="dul1 s2">
+        <li class="d2_pass" pno=""><?php echo $xml->apply->apply_content1;?></li>
+        <li class="d2_nopass" npno=""><?php echo $xml->apply->apply_content2;?></li>
+        <li class="d2_explain" epno=""><?php echo $xml->apply->apply_content3;?></li>
+        <li class="sty3 ss" scheckid="" sappno=""><?php echo $xml->apply->apply_content4;?></li>
+    </ul>
+    <img src="__IMG__baoxiaodan.png" alt="">
+
+</div>
+
+<!-- 查看相关票据 style3 -->
+<div class="apply_div3 ad3">
+    <ul class="u1">
+        <li><?php echo $xml->apply->apply_style3_content1;?></li>
+        <li><?php echo $xml->apply->apply_style3_content2;?></li>
+        <li><?php echo $xml->apply->apply_style3_content3;?></li>
+        <li><?php echo $xml->apply->apply_style3_content4;?></li>
+        <li><?php echo $xml->apply->apply_style3_content5;?></li>
+    </ul>
+    <ul class="u2 app_u2">
+
+    </ul>
+</div>
+
+<!--发票图片信息  style4-->
+<div class="apply_div4 ad4">
+    <ul class="nu">
+        <li class="click_hand appno" anoid=""><?php echo $xml->ticket->ticket_title1;?></li>
+        <li class="click_hand appund" unoid=""><?php echo $xml->ticket->ticket_title2;?></li>
+
+    </ul>
+    <div class="u2 a1">
+
+        <img ptno="" class="imgc" ptno="" src="__IMG__chuzuche.png" alt="">
+
+        <ul class="nl">
+            <li class="nli"><?php echo $xml->ticket->ticket_content1;?>&nbsp;&nbsp;:<input tyle="text" id="cticketCode" name="ticketCode" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_content2;?>&nbsp;&nbsp;:<input tyle="text" id="cticketNumber" name="ticketNumber" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_content3;?>&nbsp;&nbsp;:<input tyle="text" id="cticketTime" name="ticketTime" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_content4;?>&nbsp;&nbsp;:<input tyle="text" id="conTime" name="onTime" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_content5;?>&nbsp;&nbsp;:<input tyle="text" id="cprice" name="price" value="" /></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_content6;?>&nbsp;&nbsp;:<input tyle="text" id="clocation1" name="location1" value="" readonly/></li>
+            <p class="next_page npage" fno="">
+                <b>下一页</b>
+            </p>
+        </ul>
+
+    </div>
+    <div class="hc_u2 a2">
+        <img ptno="" class="imgc2" src="__IMG__huoche.png" alt="">
+
+        <ul>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content1;?>&nbsp;&nbsp;:<input tyle="text" id="htrainNum" name="trainNum" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content2;?>&nbsp;&nbsp;:<input tyle="text" id="hstartLocation" name="startLocation" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content3;?>&nbsp;&nbsp;:<input tyle="text" id="htime" name="time" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content4;?>&nbsp;&nbsp;:<input tyle="text" id="htrainName" name="trainName" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content5;?>&nbsp;&nbsp;:<input tyle="text" id="hlevel" name="level" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_hc_content6;?>&nbsp;&nbsp;:<input tyle="text" id="hprice" name="hprice" value="" readonly/></li>
+        </ul>
+        <div class="next_page npage" fno="">
+            <b>下一页</b>
+        </div>
+    </div>
+    <div class="fj_u2 a3">
+        <img ptno="" class="imgc3" src="__IMG__feiji.png" alt="">
+
+        <ul>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content1;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content2;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content3;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content4;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content5;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content6;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+            <li class="nli"><?php echo $xml->ticket->ticket_fj_content7;?>&nbsp;&nbsp;:<input tyle="text" name="" value="" readonly/></li>
+        </ul>
+    </div>
+</div>
+<div class="apply_sm aptext">
+    <textarea name="explain" id="stext" tno="" cols="80" rows="10"></textarea>
+    <button class="save appsave btn btn-info"><?php echo $xml->ticket->ticket_title3;?></button>
+    <button class="save appreturn btn btn-info"><?php echo $xml->ticket->ticket_title5;?></button>
+</div>
+
+<div class="apply_dsm d2text">
+    <textarea name="explain" id="dtext" tno="" cols="80" rows="10"></textarea>
+    <button class="save apsave btn btn-info"><?php echo $xml->ticket->ticket_title3;?></button>
+    <button class="save apreturn btn btn-info"><?php echo $xml->ticket->ticket_title5;?></button>
+</div>
+
+<!--左边  换名字-->
+<script>
+    $('.db_n').eq(0).addClass('act');
+    $('.d_name').click(function(){
+        //样式从新加载
+        $('.ad1').css('display','block');
+        $('.ad4').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad3').css('display','none');
+        $('.apply_sm').css('display','none');
+        $('.apply_dsm').css('display','none');
+        //底部下一页样式加载
+        $('.npage').css('display','none');
+
+        var name = $(this).html();
+        $('.clickn').html(name);//获取当前名字
+        $(this).addClass('act').siblings().removeClass('act');
+        $('.info_allname').css('display','block');
+        $('.info_all').css('display','none');
+        //数据交互
+        var id = $(this).attr('iid');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/doName')}",
+            data: {id:id},
+            success: function(msg){
+                $('.ajx').html(msg);
+            },
+            dataType:"html",
+        });
+
+    })
+</script>
+
+<script>
+    $('.ajx').on('click','.sty2',function(){
+        var uid = $('.ajx .sty2').attr('checkid');
+        var appno = $('.ajx .sty2').attr('no');
+        $('.d2_pass').attr('pno',appno);
+        $('.d2_nopass').attr('npno',appno);
+        $('.d2_explain').attr('epno',appno);
+        $('.s2 .sty3').attr('scheckid',uid);
+        $('.s2 .sty3').attr('sappno',appno);
+        $('.s2').attr('scheckid',uid);
+        $('.ad2').css('display','block');
+        $('.ad1').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad4').css('display','none');
+    })
+</script>
+<script>
+    $('.ajx').on('click','.csty3',function(){
+        $('.ad3').css('display','block');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.ad4').css('display','none');
+        //查看相关票据
+        var uid = $('.ajx .csty3').attr('ycheckid');
+        var ano = $('.ajx .csty3').attr('vappno');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/see')}",
+            data: {uid:uid,ano:ano},
+            success: function(msg){
+                $('.app_u2').html(msg);
+            },
+            dataType:"html",
+        })
+    })
+</script>
+<script>
+    $(document).on('click','.ad2 .sty3',function(){
+//    $('.csty3').on('click',function(){
+        $('.ad3').css('display','block');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.ad4').css('display','none');
+        //查看相关票据
+        var uid = $('.s2').attr('scheckid');
+        var ano = $('.s2 .ss').attr('sappno');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/see')}",
+            data: {uid:uid,ano:ano},
+            success: function(msg){
+                $('.app_u2').html(msg);
+            },
+            dataType:"html",
+        })
+    })
+</script>
+<script>
+    $('.ajx').on('click','.sty4',function(){
+        $('.ad4').css('display','block');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+    })
+</script>
+
+<!--出租车样式-->
+<script>
+    $('.app_u2').on('click','.ty0',function(){
+        var no = $(this).attr('ap_no');
+        $('.npage').attr('fno',no);
+        $('.a1 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.a2').css('display','none');
+        $('.a1').css('display','block');
+        $('.a3').css('display','none');
+        $('.npage').css('display','block');
+        $('.ad4').css('display','block');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+
+        $.ajax({
+            url:"{:url('apply/cstyle')}",
+            type:"post",
+            data:{no:no},
+            success:function(msg){
+                $('#cprice').val(msg.price);
+                $('#cticketNumber').val(msg.ticketNumber);
+                $('#cticketCode').val(msg.ticketCode);
+                $('#cticketTime').val(msg.ticketTime);
+                $('#conTime').val(msg.onTime);
+                $('#clocation1').val(msg.taxilocation1);
+                $('#cno').val(msg.ticketNo);
+                $('#ccno').text(msg.ticketNo);
+                $('#cuname').text(msg.uname);
+                $('.appno').attr('anoid',msg.ticketNo);
+                $('.nu .appund').attr('unoid',msg.ticketNo);
+
+            },
+            dataType:"json",
+        })
+
+    });
+</script>
+<!--火车样式-->
+<script>
+    $('.app_u2').on('click','.ty1',function(){
+        var no = $(this).attr('ap_no');
+        $('.npage').attr('fno',no);
+        $('.a2 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.ad4').css('display','block');
+        $('.a2').css('display','block');
+        $('.a1').css('display','none');
+        $('.a3').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.npage').css('display','block');
+
+        $.ajax({
+            url:"{:url('ticket/hstyle')}",
+            type:"post",
+            data:{no:no},
+            success:function(msg){
+                $('#hstartLocation').val(msg.startLocation);
+                $('#htime').val(msg.time);
+                $('#htrainName').val(msg.trainName);
+                $('#htrainNum').val(msg.trainNum);
+                $('#hlevel').val(msg.level);
+                $('#hprice').val(msg.price);
+                $('#hno').val(msg.ticketNo);
+                $('#hcno').text(msg.ticketNo);
+                $('#huname').text(msg.uname);
+                $('.appno').attr('anoid',msg.ticketNo);
+                $('.nu .appund').attr('unoid',msg.ticketNo);
+
+            },
+            dataType:"json",
+        })
+    })
+</script>
+<script>
+    $('.aj').on('click','.stye2',function(){
+        var no = $(this).attr('no');
+        $('.npage').attr('fno',no);
+        $('.a3 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.npage').css('display','block');
+        $('.ad4').css('display','block');
+        $('.a3').css('display','block');
+        $('.a2').css('display','none');
+        $('.a1').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.a1 img').attr('dis','n');
+        $('.a2 img').attr('dis','n');
+        $('.a3 img').attr('dis','b');
+
+        $.ajax({
+            url:"{:url('ticket/fstyle')}",
+            type:"post",
+            data:{no:no},
+            success:function(msg){
+                $('#fstartLocation').val(msg.startLocation);
+                $('#fdate').val(msg.date);
+                $('#fname').val(msg.name);
+                $('#flevel').val(msg.level);
+                $('#fprice').val(msg.price);
+                $('#felectronicNo').val(msg.electronicNo);
+                $('#fno').val(msg.ticketNo);
+                $('.appno').attr('anoid',msg.ticketNo);
+                $('.nu .appund').attr('unoid',msg.ticketNo);
+
+            },
+            dataType:"json",
+        })
+    })
+</script>
+
+<!--下一页-->
+<script>
+    $('.ad4').on('click','.npage',function(){
+        var no = $(this).attr('fno');
+        $.ajax({
+            url:"{:url('apply/nextPage')}",
+            type:"post",
+            data:{no:no},
+            success:function(msg){
+                if(msg == 4){
+                    window.location.href="index";
+                }else {
+                    $('.ad4').html(msg);
+                }
+            }
+        })
+
+    })
+</script>
+
+<!--出租不合格-->
+<script>
+    $(document).on('click','.nu .appno',function(){
+        if (!confirm("确认执行此操作？")) {
+            window.event.returnValue = false;
+        }
+        var no = $(this).attr('anoid');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/nohg')}",
+            data: {no: no},
+            success: function (msg) {
+                if(msg == 1){
+                    alert('操作成功');
+                    window.location.reload();
+                }else{
+                    alert('操作失败');
+                }
+            }
+        })
+    })
+</script>
+<!--出租说明-->
+<script>
+    $(document).on('click','.nu .appund',function(){
+        var no = $('.appno').attr('anoid');
+        $('#stext').attr('tno',no);
+        $('.aptext').css('display','block');
+        $('.d2text').css('display','none');
+        $('.ad4').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/tsave')}",
+            data: {no: no},
+            success: function (msg) {
+                $('#stext').val( msg.explain);
+
+            },
+            dataType:"json"
+        })
+    })
+</script>
+<!--出租保存说明-->
+<script>
+    $('.appsave').click(function(){
+        var text = $('#stext').val();
+        var no = $('#stext').attr('tno');
+        $.ajax({
+            type: "post",
+            url: "{:url('apply/savetext')}",
+            data: {text: text,no:no},
+            success: function (msg) {
+                if(msg == 1){
+                    alert('操作成功');
+                    window.location.reload();
+                }else{
+                    alert('操作失败');
+                }
+            }
+        })
+    })
+</script>
+
+{/block}

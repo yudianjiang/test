@@ -1,0 +1,103 @@
+{extend name="index:base" /}
+{block name="title"}<?php echo $xml->index->index_title;?>{/block}
+
+{block name="content"}
+{include file="index/fleft" /}
+
+<div style=" margin-left:15%; width: 70%;">
+
+    <table width="1200px" class="v_table">
+        <tr>
+            <th colspan="6" style="text-align: center;"><h1>记账凭证</h1></th>
+        </tr>
+        <tr>
+            <td colspan="4" width="900px">&nbsp;</td>
+            <td colspan="2" width="300px" style="text-align: end;">凭证编号:{$lists.vouNo}</td>
+        </tr>
+        <tr>
+            <td colspan="3" width="400px">中国科学院自动化研究所</td>
+            <td colspan="1" width="200px" style="text-align: center;">{$lists.addtime}</td>
+            <td colspan="1" width="150px" style="text-align: end;">附件&nbsp;1&nbsp;张</td>
+            <td colspan="1" width="150px" style="text-align: end;">第&nbsp;1/1&nbsp;页</td>
+        </tr>
+        <table class="v_table">
+
+            <table width="1200px" border="1" cellspacing="0" cellpadding="0" class="v_table">
+                <tr>
+                    <td colspan="2" width="20%" style="text-align: center;">摘要</td>
+                    <td width="100px" style="text-align: center;">经手人</td>
+                    <td width="500px" style="text-align: center;">账户信息</td>
+                    <td width="150px" style="text-align: center;">借方金额</td>
+                    <td width="150px" style="text-align: center;">贷方金额</td>
+                </tr>
+                {volist name='voucher' id='v'}
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>{$v.main}</td>
+                    <td>{$v.passPerson}</td>
+                    <td>
+                        {$v.vouInfo}
+                    </td>
+                    <td style="text-align: end;">{$v.borrowPrice}</td>
+                    <td>{$v.loanPrice}</td>
+                </tr>
+                {/volist}
+                <tr height="80px">
+                    <td style="border-right:#ffffff solid 1px;"></td>
+                    <td style="border-right:#ffffff solid 1px;"></td>
+                    <td style="border-right:#ffffff solid 1px;"></td>
+                    <td style="border-right:#ffffff solid 1px;"></td>
+                    <td style="border-right:#ffffff solid 1px;"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">合计:</td>
+                    <!--<td colspan="3">人民币(大写)&nbsp;叁佰捌拾陆元整</td>-->
+                    <td colspan="3"></td>
+                    <td style="text-align: end;"></td>
+                    <td style="text-align: end;">{$lists.allPrice}</td>
+                </tr>
+            </table>
+
+            <table width="1200px" class="v_table">
+                <tr>
+                    <td width="240px">财务负责人:&nbsp;&nbsp;&nbsp;&nbsp;李玉杰</td>
+                    <td width="240px">记账:&nbsp;&nbsp;&nbsp;&nbsp;李汝敏</td>
+                    <td width="240px">出纳:&nbsp;&nbsp;&nbsp;&nbsp;梁婧</td>
+                    <td width="240px">复核:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td width="240px">制证:&nbsp;&nbsp;&nbsp;&nbsp;刘艳</td>
+                </tr>
+                <table>
+</div>
+
+<script>
+    $('.db_n').eq(0).addClass('act');
+    $('.d_name').click(function(){
+        //样式从新加载
+        $('.ad3').css('display','block');
+        $('.ad4').css('display','none');
+        //底部下一页样式加载
+        $('.npage').css('display','none');
+
+        var name = $(this).html();
+        $('.clickn').html(name);//获取当前名字
+        $(this).addClass('act').siblings().removeClass('act');
+        $('.info_allname').css('display','block');
+        $('.info_all').css('display','none');
+
+        //数据交互
+        var id = $(this).attr('iid');
+
+        $.ajax({
+            type: "post",
+            url: "{:url('ticket/doName')}",
+            data: {id:id},
+            success: function(msg){
+                $('.aj').html(msg);
+            },
+            dataType:"html",
+        });
+
+    })
+</script>
+{/block}

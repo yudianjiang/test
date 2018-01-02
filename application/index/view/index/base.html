@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"><!-- 这里标识了页的编码视别格式 -->
+    <title>{block name="title"}{/block}</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__bootstrap.min.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__main.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__base.css" charset="utf-8"/>
+    <script type="text/javascript" src="__JS__jquery-2.1.4.min.js"></script>
+
+    <style>
+        .act{
+            color:#ff0000;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="div1">
+        <span class="sp1"><b><?php echo $xml->index->index_logo;?></b></span>
+        <span class="sp2">姓名:{$Think.session.uname}</span>
+        <span class="sp3">设置</span>
+        <span class="sp4">帮助</span>
+        <span class="sp5">退出</span>
+        <div class="div2">
+            <input type="text" class="form-control" >
+            <div class="fd">
+                <img style="width:32px;" src="__IMG__fangdajing.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="h">
+            <a href="{:Url('info/index')}"><li {eq name="$request->controller()" value="Info"} class="act" {/eq}>信息管理</li></a>
+            <a href="{:Url('apply/index')}"><li {eq name="$request->controller()" value="Apply"} class="act" {/eq}>报销管理</li></a>
+            <a href="{:Url('ticket/index')}"><li {eq name="$request->controller()" value="Ticket"} class="act" {/eq}>票据管理</li></a>
+            <a href="#"><li>数据导入</li></a>
+            <li><a href="#">数据导出</a></li>
+            <a href="{:Url('capacity/index')}"><li {eq name="$request->controller()" value="Capacity"} class="act" {/eq}>智能审核</li></a>
+            <a href="{:Url('voucher/index')}"><li {eq name="$request->controller()" value="Voucher"} class="act" {/eq}>记账凭证</li></a>
+            <li class="sys"><a href="#">系统管理</a></li>
+        </ul>
+        <ul class="hmenu bh" style="display:none;">
+            <a href="{:Url('member/index')}"><li {eq name="$request->controller()" value="Member"} class="act" {/eq}>人员管理</li></a>
+            <a href="{:Url('applyset/index')}" class="sys"><li {eq name="$request->controller()" value="Applyset"} class="act" {/eq}>报销设置</li></a>
+            <li class="ret rtn">返回</li>
+        </ul>
+
+    </div>
+</header>
+{block name="content"}{/block}
+</body>
+</html>
+<script>
+    $('.sys').click(function(){
+        $('.bh').css('display','block');
+        $('.h').css('display','none');
+        window.location.href = 'http://120.27.49.216:8088/index/member/index';
+    })
+</script>
+<script>
+    $('.rtn').click(function(){
+        $('.bh').css('display','none');
+        $('.h').css('display','block');
+        window.location.href = 'http://120.27.49.216:8088/index/info/index';
+    })
+</script>
+<!--导航高亮-->
+<script>
+    //    $(function(){
+    //        $('.h li').eq(0).addClass('act');
+    //        $('.h li').each(function(){
+    //            $(this).click(function(){
+    //                $(this).css('color','red');
+    //            })
+    //        })
+    //    })
+
+</script>
+
+
+

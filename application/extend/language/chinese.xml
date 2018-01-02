@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><local>
+<index>
+<index_logo>i-FSSC</index_logo>
+<index_title>智能云财务共享平台</index_title>
+<index_head1>互联网的开始</index_head1>
+<index_content1>中国科学院自动化研究所</index_content1>
+<index_content2>智能财务云平台i-FSSC</index_content2>
+</index>
+
+
+<!--小左边菜单  公共部分-->
+<fleft>
+    <fleft_menu1>出租票</fleft_menu1>
+    <fleft_menu2>火车票</fleft_menu2>
+    <fleft_menu3>飞机票</fleft_menu3>
+    <fleft_menu4>增值票</fleft_menu4>
+    <fleft_menu5>电子票</fleft_menu5>
+    <fleft_menu6>其他</fleft_menu6>
+</fleft>
+
+<!--报销管理-->
+<apply>
+    <apply_menu1>文件名</apply_menu1>
+    <apply_menu2>金额</apply_menu2>
+    <apply_menu3>日期</apply_menu3>
+    <apply_menu4>状态</apply_menu4>
+    <apply_menu5>报销申请人</apply_menu5>
+    <apply_content1>通过</apply_content1>
+    <apply_content2>不通过</apply_content2>
+    <apply_content3>说明</apply_content3>
+    <apply_content4>查看相关票据</apply_content4>
+    <apply_style3_content1>文件名</apply_style3_content1>
+    <apply_style3_content2>种类</apply_style3_content2>
+    <apply_style3_content3>金额</apply_style3_content3>
+    <apply_style3_content4>日期</apply_style3_content4>
+    <apply_style3_content5>状态</apply_style3_content5>
+</apply>
+
+<!--票据管理-->
+<ticket>
+    <ticket_title1>不合格</ticket_title1>
+    <ticket_title2>说明</ticket_title2>
+    <ticket_title3>保存</ticket_title3>
+    <ticket_title4>删除</ticket_title4>
+    <ticket_title5>返回</ticket_title5>
+    <ticket_content1>发票代码</ticket_content1>
+    <ticket_content2>发票号码</ticket_content2>
+    <ticket_content3>发票日期</ticket_content3>
+    <ticket_content4>发票时间</ticket_content4>
+    <ticket_content5>发票金额</ticket_content5>
+    <ticket_content6>起始地点</ticket_content6>
+    <ticket_hc_content1>火车车次</ticket_hc_content1>
+    <ticket_hc_content2>起始地点</ticket_hc_content2>
+    <ticket_hc_content3>车票日期</ticket_hc_content3>
+    <ticket_hc_content4>发车时间</ticket_hc_content4>
+    <ticket_hc_content5>乘客姓名</ticket_hc_content5>
+    <ticket_hc_content6>座位级别</ticket_hc_content6>
+    <ticket_hc_content7>车票金额</ticket_hc_content7>
+    <ticket_fj_content1>印刷序号</ticket_fj_content1>
+    <ticket_fj_content2>起始地点</ticket_fj_content2>
+    <ticket_fj_content3>机票日期</ticket_fj_content3>
+    <ticket_fj_content4>机票级别</ticket_fj_content4>
+    <ticket_fj_content5>乘客姓名</ticket_fj_content5>
+    <ticket_fj_content6>机票金额</ticket_fj_content6>
+    <ticket_fj_content7>电子客票号</ticket_fj_content7>
+
+</ticket>
+
+<!--人员管理-->
+<member>
+    <member_title1>个人资料</member_title1>
+    <member_title2>名下课题</member_title2>
+    <member_title3>报销权限</member_title3>
+    <member_title4>权限管理</member_title4>
+    <member_title5>密码管理</member_title5>
+    <member_title6>添加人员</member_title6>
+    <member_person_content1>姓名</member_person_content1>
+    <member_person_content2>身份证</member_person_content2>
+    <member_person_content3>报销银行卡</member_person_content3>
+    <member_person_content4>银行名称</member_person_content4>
+    <member_person_content5>职务</member_person_content5>
+    <member_sty2_content1>课题</member_sty2_content1>
+    <member_sty2_content2>名称</member_sty2_content2>
+    <member_sty2_content3>金额 </member_sty2_content3>
+    <member_sty2_content4>起止日期</member_sty2_content4>
+    <member_sty2_content5>类别</member_sty2_content5>
+    <member_sty3_content1>出租票</member_sty3_content1>
+    <member_sty3_content2>火车票</member_sty3_content2>
+    <member_sty3_content3>飞机票</member_sty3_content3>
+    <member_sty4_content1>上传</member_sty4_content1>
+    <member_sty5_content1>原密码</member_sty5_content1>
+    <member_sty5_content2>新密码</member_sty5_content2>
+    <member_sty5_content3>恢复初始</member_sty5_content3>
+    <member_sty6_content1>姓名</member_sty6_content1>
+    <member_sty6_content2>职务</member_sty6_content2>
+    <member_sty6_content3>银行名称</member_sty6_content3>
+    <member_sty6_content4>银行卡号</member_sty6_content4>
+    <member_sty6_content5>课题组</member_sty6_content5>
+    <member_sty6_content6>部门</member_sty6_content6>
+    <member_sty6_content7>公司</member_sty6_content7>
+    <member_sty6_content8>账号</member_sty6_content8>
+    <member_together1>是</member_together1>
+    <member_together2>否</member_together2>
+</member>
+
+<!--报销设置-->
+<applyset>
+    <applyset_cz_content1>连号报警</applyset_cz_content1>
+    <applyset_cz_content2>工作时间</applyset_cz_content2>
+    <applyset_cz_content3>时间重叠</applyset_cz_content3>
+    <applyset_cz_content4>审查金额</applyset_cz_content4>
+    <applyset_cz_submit>提交</applyset_cz_submit>
+    <applyset_hc_public_content1>职称</applyset_hc_public_content1>
+    <applyset_hc_public_content2>职务</applyset_hc_public_content2>
+    <applyset_hc_content1>硬座</applyset_hc_content1>
+    <applyset_hc_content2>软座</applyset_hc_content2>
+    <applyset_hc_content3>硬卧</applyset_hc_content3>
+    <applyset_hc_content4>软卧</applyset_hc_content4>
+    <applyset_fj_content1>经济舱</applyset_fj_content1>
+    <applyset_fj_content2>商务舱</applyset_fj_content2>
+    <applyset_fj_content3>头等舱</applyset_fj_content3>
+</applyset>
+
+
+
+
+
+
+</local>

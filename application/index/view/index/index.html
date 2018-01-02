@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"><!-- 这里标识了页的编码视别格式 -->
+    <title>智能云财务共享平台</title>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__bootstrap.min.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__register.css" charset="utf-8"/>
+
+    <script type="text/javascript" src="__JS__jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+    <div class="background" >
+        <p class="p1"><?php echo $xml->index->index_content1;?></p>
+        <h1><?php echo $xml->index->index_content2;?></h1>
+        <div class="div1">
+            <form action="{:Url('index/register/index')}" method="post">
+                <div class="div2">
+                    <div class="div3">
+                        <div class="d1">
+                            <span class="p2"><b>用户名:</b></span><input name="uname"  type="text" value="" placeholder="邮箱/手机号码/注册账号" style="border-radius:5px;" />
+                        </div>
+                        <div class="d2">
+                            <span class="p3"><b>密&nbsp;&nbsp;&nbsp;码:</b></span><input name="upwd" type="password"  value="" placeholder="********" style="border-radius:5px; margin-left:3px;" />
+                        </div>
+                        <!--<div class="fdiv">-->
+                            <!--<input type="checkbox" style="margin-left:55px;margin-top:3px;" class="cb" >&nbsp;&nbsp;<span>记住登录信息</span>-->
+                        <!--</div>-->
+
+                    </div>
+                        <input  class="div4"  type="submit" value="登录" />
+
+                </div>
+            </form>
+
+        </div>
+
+        <p class="fp1">Copyright ©2017-2018 i-Fssc Corporation,All Rights Reserved</p>
+        <p class="fp2">All Rights Reserved</p>
+    </div>
+    <script type="text/javascript" src="__JS__bootstrap.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

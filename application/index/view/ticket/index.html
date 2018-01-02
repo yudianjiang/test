@@ -1,0 +1,409 @@
+{extend name="index:base" /}
+{block name="title"}<?php echo $xml->index->index_title;?>{/block}
+
+{block name="content"}
+{include file="index/left" /}
+<script>
+    $(function(){
+//        $('.db_n').eq(0).css('color','#ff0000');
+        $('.apply_div3').css('display','block');
+    })
+
+</script>
+<link rel="stylesheet" type="text/css" href="__CSS__main.css" charset="utf-8"/>
+<script type="text/javascript" src="__JS__ticket.js"></script>
+<!--通过 不通过  样式2-->
+<div class="apply_div2 ad2">
+    <ul class="dul1">
+        <li><?php echo $xml->apply->apply_content1;?></li>
+        <li><?php echo $xml->apply->apply_content2;?></li>
+        <li><?php echo $xml->apply->apply_content3;?></li>
+        <li class="sty3"><?php echo $xml->apply->apply_content4;?></li>
+    </ul>
+    <img src="__IMG__baoxiaodan.png" alt="">
+
+</div>
+
+<!-- 查看相关票据 style3 -->
+<div class="apply_div3 ad3">
+    <ul class="u1">
+        <li><?php echo $xml->apply->apply_style3_content1;?></li>
+        <li><?php echo $xml->apply->apply_style3_content2;?></li>
+        <li><?php echo $xml->apply->apply_style3_content3;?></li>
+        <li><?php echo $xml->apply->apply_style3_content4;?></li>
+        <li><?php echo $xml->apply->apply_style3_content5;?></li>
+    </ul>
+    <ul class="u2 aj">
+        {volist name="ticket" id="v"}
+        <li class="hand stye{$v.type} id" no="{$v.ticketNo}" nextNo="{$v.nextNo}">{$v.order}</li>
+        <li>
+            {switch name="$v.type"}
+            {case value="2"}火车票{/case}
+            {case value="3"}飞机票{/case}
+            {default /}出租票
+            {/switch}
+        </li>
+        <li>{$v.price}</li>
+        <li>{$v['addTime']|date="Y-m-d H:i:s",###}</li>
+        <li>
+            {switch name="$v.recogn"}
+            {case value="1"}识别{/case}
+            {case value="2"}人工{/case}
+            {default /}拒识
+            {/switch}
+        </li>
+        {/volist}
+    </ul>
+</div>
+
+
+<!--发票图片信息  style4-->
+<div class="apply_div4 ad4">
+    <form id="taxiForm" onsubmit="return false" action="##" method="post" >
+
+        <div class="u2 a1">
+            <input type="hidden" id="cno" name="ticketNo" value=""/>
+            <ul class="ub">
+                <!--<li class="lis"><input class="" type="submit" value="<?php echo $xml->ticket->ticket_title3;?>"></li>-->
+                <li class="lis"><button class="czbtn" type="submit" value=""><?php echo $xml->ticket->ticket_title3;?></button></li>
+                <li  delno="" class="cbtt lis del"><?php echo $xml->ticket->ticket_title4;?></li>
+                <li class="rid"><span id="cuname"></span><span>-</span><span id="ccno"></span></li>
+            </ul>
+            <img ptno=""  class="imgc" id="czimg" src="" alt="">
+
+
+            <ul>
+                <li class="nli"><?php echo $xml->ticket->ticket_content1;?>&nbsp;&nbsp;:<input type="text" id="cticketCode" name="ticketCode" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_content2;?>&nbsp;&nbsp;:<input type="text" id="cticketNumber" name="ticketNumber" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_content3;?>&nbsp;&nbsp;:<input type="text" id="cticketTime" name="ticketTime" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_content4;?>&nbsp;&nbsp;:<input type="text" id="coffTime" name="offTime" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_content5;?>&nbsp;&nbsp;:<input type="text" id="cprice" name="price" value=""/></li>
+                <!--<li class="nli"><?php echo $xml->ticket->ticket_content6;?>&nbsp;&nbsp;:<input type="text" id="clocation1" name="taxilocation1" value=""/></li>-->
+            </ul>
+            <div class="next_page npage" fno="" ono="" nextPage="">
+                <b>下一页</b>
+            </div>
+        </div>
+    </form>
+    <!--火车-->
+    <form id="trainForm" method="post" onsubmit="return false" action="##" method="post">
+        <div class="hc_u2 a2">
+            <input type="hidden" id="hno" name="hticketNo" value=""/>
+            <ul class="ub">
+                <li class="lis"><button class="hcbtn" type="submit" value=""><?php echo $xml->ticket->ticket_title3;?></button></li>
+                <li  hdelno="" class="lis hdel"><?php echo $xml->ticket->ticket_title4;?></li>
+                <li class="rid"><span id="huname"></span><span>-</span><span id="hcno"></span></li>
+            </ul>
+            <img ptno="" class="imgc2" id="hcimg" src="" alt="">
+
+            <ul >
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content1;?>&nbsp;&nbsp;:<input type="text" id="htrainNum" name="trainNum" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content2;?>&nbsp;&nbsp;:<input type="text" id="hstartLocation" name="startLocation" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content3;?>&nbsp;&nbsp;:<input type="text" id="htime" name="traintime" value=""/></li>
+                <!--<li class="nli"><?php echo $xml->ticket->ticket_hc_content4;?>&nbsp;&nbsp;:<input type="text" id="htime" name="time" value=""/></li>-->
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content5;?>&nbsp;&nbsp;:<input type="text" id="htrainName" name="trainUname" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content6;?>&nbsp;&nbsp;:<input type="text" id="hlevel" name="level" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_hc_content7;?>&nbsp;&nbsp;:<input type="text" id="hprice" name="hprice" value=""/></li>
+            </ul>
+            <div class="next_page npage" fno="" ono="" nextPage="">
+                <b>下一页</b>
+            </div>
+        </div>
+    </form>
+    <!--飞机-->
+    <form id="planeForm" method="post" onsubmit="return false" action="##" method="post">
+        <div class="fj_u2 a3">
+            <input type="hidden" id="fno" name="fticketNo" value=""/>
+            <ul class="ub">
+                <li class="lis"><button class="fjbtn" type="submit" value=""><?php echo $xml->ticket->ticket_title3;?></button></li>
+                <li  fdelno="" class="lis fdel"><?php echo $xml->ticket->ticket_title4;?></li>
+                <li class="rid"><span id="funame"></span><span>-</span><span id="fcno"></span></li>
+            </ul>
+            <img ptno="" class="imgc3" id="fjimg" src="__IMG__feiji.png" alt="">
+
+            <ul>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content1;?>&nbsp;&nbsp;:<input type="text" id="forderNum" name="planeNumber" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content2;?>&nbsp;&nbsp;:<input type="text" id="fstartLocation" name="planeSlocation" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content3;?>&nbsp;&nbsp;:<input type="text" id="fdate" name="planedate" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content4;?>&nbsp;&nbsp;:<input type="text" id="flevel" name="planelevel" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content5;?>&nbsp;&nbsp;:<input type="text" id="fname" name="planeUname" value=""/></li>
+                <li class="nli"><?php echo $xml->ticket->ticket_fj_content6;?>&nbsp;&nbsp;:<input type="text" id="fprice" name="price" value=""/></li>
+                <!--<li class="nli"><?php echo $xml->ticket->ticket_fj_content7;?>&nbsp;&nbsp;:<input type="text" id="felectronicNo" name="electronicNo" value=""/></li>-->
+            </ul>
+            <div class="next_page npage" fno="" ono="" nextPage="">
+                <b>下一页</b>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!--左边  换名字-->
+<script>
+    $('.db_n').eq(0).addClass('act');
+    $('.d_name').click(function(){
+        //样式从新加载
+        $('.ad3').css('display','block');
+        $('.ad4').css('display','none');
+        //底部下一页样式加载
+        $('.npage').css('display','none');
+
+        var name = $(this).html();
+        $('.clickn').html(name);//获取当前名字
+        $(this).addClass('act').siblings().removeClass('act');
+        $('.info_allname').css('display','block');
+        $('.info_all').css('display','none');
+
+        //数据交互
+        var id = $(this).attr('iid');
+
+        $.ajax({
+            type: "post",
+            url: "{:url('ticket/doName')}",
+            data: {id:id},
+            success: function(msg){
+                $('.aj').html(msg);
+            },
+            dataType:"html",
+        });
+
+    })
+</script>
+
+<script>
+    $('.sty2').click(function(){
+        $('.ad2').css('display','block');
+        $('.ad1').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad4').css('display','none');
+    })
+</script>
+<script>
+    $('.sty3').click(function(){
+        $('.ad3').css('display','block');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.ad4').css('display','none');
+    })
+</script>
+
+<!--切换票据图片等详细信息-->
+<script>
+    $('.aj').on('click','.stye1',function(){
+        var no = $(this).attr('no');
+        var nextPage = $(this).attr('nextNo');
+        var orderNo = $(this).text();
+        $('.npage').attr('fno',no);
+        $('.npage').attr('ono',orderNo);
+        $('.a1 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.npage').css('display','block');
+        $('.ad4').css('display','block');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.a2').css('display','none');
+        $('.a3').css('display','none');
+        $('.a1').css('display','block ');
+
+        $.ajax({
+            url:"{:url('ticket/cstyle')}",
+            type:"post",
+            data:{no:no,orderNo:orderNo,nextPage:nextPage},
+            success:function(msg){
+                $('#cprice').val(msg.price);
+                $('#cticketNumber').val(msg.ticketNumber);
+                $('#cticketCode').val(msg.ticketCode);
+                $('#cticketTime').val(msg.ticketTime);
+                $('#coffTime').val(msg.offTime);
+                $('#clocation1').val(msg.taxilocation1);
+                $('#cno').val(msg.ticketNo);
+                $('#ccno').text(msg.order);
+                $('.ono').text(msg.order);
+                $('#cuname').text(msg.uname);
+                $('.del').attr('delno',msg.ticketNo);
+                $('#czimg').attr('src',msg.image);
+
+            },
+            dataType:"json",
+        })
+
+    });
+</script>
+<script>
+    $('.aj').on('click','.stye2',function(){
+        var no = $(this).attr('no');
+        var orderNo = $(this).text();
+        $('.npage').attr('fno',no);
+        $('.npage').attr('ono',orderNo);
+        $('.a2 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.npage').css('display','block');
+        $('.ad4').css('display','block');
+        $('.a2').css('display','block');
+        $('.a1').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.a1 img').attr('dis','n');
+        $('.a2 img').attr('dis','b');
+        $('.a3 img').attr('dis','n');
+
+        $.ajax({
+            url:"{:url('ticket/hstyle')}",
+            type:"post",
+            data:{no:no,orderNo:orderNo},
+            success:function(msg){
+                $('#hstartLocation').val(msg.startLocation);
+                $('#htime').val(msg.traintime);
+                $('#htrainName').val(msg.trainUname);
+                $('#htrainNum').val(msg.trainNum);
+                $('#hlevel').val(msg.level);
+                $('#hprice').val(msg.price);
+                $('#hno').val(msg.ticketNo);
+                $('#hcno').text(msg.order);
+                $('.ono').text(msg.order);
+                $('#huname').text(msg.uname);
+                $('.hdel').attr('hdelno',msg.ticketNo);
+                $('#hcimg').attr('src',msg.image);
+
+            },
+            dataType:"json",
+        })
+    })
+</script>
+<script>
+    $('.aj').on('click','.stye3',function(){
+        var no = $(this).attr('no');
+        var orderNo = $(this).text();
+        $('.npage').attr('fno',no);
+        $('.npage').attr('ono',orderNo);
+        $('.a3 img').attr('ptno',no);
+        //底部下一页样式加载
+        $('.npage').css('display','block');
+        $('.ad4').css('display','block');
+        $('.a3').css('display','block');
+        $('.a2').css('display','none');
+        $('.a1').css('display','none');
+        $('.ad3').css('display','none');
+        $('.ad2').css('display','none');
+        $('.ad1').css('display','none');
+        $('.a1 img').attr('dis','n');
+        $('.a2 img').attr('dis','n');
+        $('.a3 img').attr('dis','b');
+
+        $.ajax({
+            url:"{:url('ticket/fstyle')}",
+            type:"post",
+            data:{no:no,orderNo:orderNo},
+            success:function(msg){
+                var jObject=jQuery.parseJSON(msg );
+                $('#forderNum').val(jObject.planeNumber);
+                $('#fstartLocation').val(jObject.planeSlocation);
+                $('#fdate').val(jObject.planedate);
+                $('#fname').val(jObject.planeUname);
+                $('#flevel').val(jObject.planelevel);
+                $('#fprice').val(jObject.price);
+                $('#fno').val(jObject.ticketNo);
+                $('#fcno').text(jObject.order);
+                $('.ono').text(jObject.order);
+                $('#funame').text(jObject.uname);
+                $('.fdel').attr('fdelno',jObject.ticketNo);
+                $('#fjimg').attr('src',msg.image);
+
+            },
+            dataType:"json",
+        })
+    })
+</script>
+<!--下一页-->
+<script>
+    $('.ad4').on('click','.npage',function(){
+        var fno = $(this).attr('fno');
+        var ono = $(this).attr('ono');
+        $.ajax({
+            url:"{:url('ticket/nextPage')}",
+            type:"post",
+            data:{fno:fno,ono:ono},
+            success:function(msg){
+                if(msg == 4){
+                    window.location.href="index";
+                }else {
+                    $('.ad4').html(msg);
+                }
+            }
+        })
+
+    })
+</script>
+
+<!--删除 出租-->
+<script>
+    $('.del').click(function(){
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+        var delno = $(this).attr('delno');
+        $.ajax({
+            url:"{:url('ticket/delc')}",
+            type:"post",
+            data:{delno:delno},
+            success:function(msg){
+                if(msg ==1){
+                    alert('删除成功');
+                    window.location.reload();
+                }else{
+                    alert('删除失败');
+                }
+            }
+        })
+    })
+</script>
+
+<!--删除 火车-->
+<script>
+    $('.hdel').click(function(){
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+        var delno = $(this).attr('hdelno');
+        $.ajax({
+            url:"{:url('ticket/delh')}",
+            type:"post",
+            data:{delno:delno},
+            success:function(msg){
+                if(msg ==1){
+                    alert('删除成功');
+                    window.location.reload();
+                }else{
+                    alert('删除失败');
+                }
+            }
+        })
+    })
+</script>
+
+
+<!--删除 飞机-->
+<script>
+    $('.fdel').click(function(){
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+        var delno = $(this).attr('fdelno');
+        $.ajax({
+            url:"{:url('ticket/delf')}",
+            type:"post",
+            data:{delno:delno},
+            success:function(msg){
+                if(msg ==1){
+                    alert('删除成功');
+                    window.location.reload();
+                }else{
+                    alert('删除失败');
+                }
+            }
+        })
+    })
+</script>
+{/block}

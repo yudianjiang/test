@@ -1,0 +1,120 @@
+<link rel="stylesheet" type="text/css" href="__CSS__left.css" charset="utf-8"/>
+<script type="text/javascript" src="__JS__jquery-2.1.4.min.js"></script>
+<style>
+    .active{
+        display: block;
+    }
+
+    .cor {
+        color:#00bfff;
+    }
+
+</style>
+<div class="l_bdiv">
+    <div class="l_div1">
+        <div class="caSpan mlg"><span>目录</span></div>
+
+    </div>
+    <!--目录div-->
+    <div class="ml">
+
+        <div class="bdiv">
+            {volist name="list" id="v"}
+            <p class="ove ment">{$v.name}</p>
+            <div class="cdiv cg">
+                {volist name="$v.son" id="sv"}
+                <p class="classg">{$sv.name}</p>
+                <div class="ndiv">
+                    {volist name="$sv.uinfo" id ="vv"}
+                    <p iid="{$vv.num}" class="nameg shown d_name">{$vv.name}</p>
+                    {/volist}
+                </div>
+                {/volist}
+            </div>
+            {/volist}
+        </div>
+
+    </div>
+
+</div>
+
+<!--鼠标悬停 显示隐藏文字-->
+<script>
+    $('.ment').hover(function(){
+        $(this).css('overflow','visible');
+    },function (){
+        $(this).css('overflow','hidden');
+    });
+</script>
+
+<script type="text/javascript">
+    $('.classg').hide();
+    $('.nameg').hide();
+    $('.ml').show();
+</script>
+
+<script>
+    $('.ment').each(function(){
+        $(this).click(function(){
+            if($(this).next().find('.classg').hasClass("active")){
+                $(this).removeClass("act");
+                $(this).next().find('.classg').toggle();
+                $(this).next().find('.classg').remove("active");
+                $('.nameg').hide();
+            }else{
+                $(this).addClass("act");
+                $(this).next().find('.classg').toggle();
+//                $(this).siblings().find('.classg').css('display','block');
+                $('.nameg').hide();
+                $(this).next().find('.classg').addClass('active');
+
+
+            }
+
+        })
+    })
+
+</script>
+
+<script>
+    $('.classg').each(function(){
+        $(this).click(function() {
+            if ($(this).next().find('.nameg').hasClass("active")) {
+                $(this).next().find('.nameg').toggle();
+                $(this).next().find('.nameg').remove("active");
+            } else {
+                $(this).next().find('.nameg').toggle();
+                $(this).next().find('.nameg').addClass("active");
+
+            }
+        })
+    })
+</script>
+
+<script>
+    $('.nameg').click(function(){
+        $('.info_allname').css('display','block');
+        $(this).addClass('cor').siblings().removeClass('cor');
+        $('.info_all').css('display','none');
+
+    })
+</script>
+
+
+<!--代办 目录 下级显示隐藏-->
+<script>
+    $('.dbg').click(function(){
+        $('.db').show();
+        $('.ml').hide();
+        $('.dbg span').parent().css('background-color','#00FFFF');
+        $('.mlg span').parent().css('background-color','');
+    })
+    $('.mlg').click(function(){
+        $('.db').hide();
+        $('.ml').show();
+        $('.info_all').show();
+        $('.info_allname').hide();
+        $('.mlg span').parent().css('background-color','#00FFFF');
+        $('.dbg span').parent().css('background-color','');
+    })
+</script>

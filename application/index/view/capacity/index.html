@@ -1,0 +1,45 @@
+{extend name="index:base" /}
+{block name="title"}<?php echo $xml->index->index_title;?>{/block}
+
+{block name="content"}
+{include file="index/capacityLeft" /}
+<!--<div class="cap_tdiv">-->
+    <!--<div class="capDiv input-group input-group-lg">-->
+        <!--<input type="text"  class="form-control" placeholder="用户账号/手机号/电子邮件" aria-describedby="sizing-addon1">-->
+        <!--<div class="capImg">-->
+            <!--<img src="__IMG__fangdajing.png" />-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div style="display: none" class="cap_Ldiv">-->
+<!--<p>于殿江</p>-->
+<!--</div>-->
+
+<!--<div style="display: none" class="cap_lastdiv">-->
+<!--<img  src="http://120.27.49.216:8083/uploads/picture/2439/2017-11-24/2_20171124112614_0.jpg"/>-->
+<!--<img  src="http://120.27.49.216:8083/uploads/picture/2439/2017-11-24/2_20171124112614_0.jpg"/>-->
+
+<!--</div>-->
+<div class="cap_Ldiv">
+    <h1>连号</h1>
+    {volist name="endarr" id="vo"}
+    <div>出租票{$vo.name}连号</div>
+    {/volist}
+</div>
+
+<div class="cap_rdiv">
+    <h1>超过金额限制票据</h1>
+    {volist name="arr" id="v"}
+    <div>出租票{$v.uname}的{$v.order}超过{$limitPrice}元</div>
+    {/volist}
+</div>
+<script>
+    //自动刷新
+    function myrefresh()
+    {
+        window.location.reload();
+    }
+    //setTimeout('myrefresh()',3000);
+</script>
+{/block}
