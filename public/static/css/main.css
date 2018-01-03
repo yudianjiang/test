@@ -1,0 +1,1337 @@
+/** 公共部分 **/
+@media screen and (min-width: 980px) {
+    li {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .click_hand {
+        cursor: pointer;
+    }
+
+    .m_div input {
+        border: 0px;
+    }
+
+    .as_div input {
+        border: 0px;
+    }
+
+    .apply_div4 input {
+        border: 0px;
+    }
+
+    .page {
+        float: left;
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    /*首页 信息管理*/
+    .info_div {
+        width: 500px;
+        margin-left: 30%;
+    }
+
+    .info_div div {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .info_rd {
+        font-size: 26px;
+        width: 300px;
+        float: right;
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .info_mrd {
+        font-size: 26px;
+        width: 300px;
+        float: right;
+        margin-top: -50px;
+        margin-right: 250px;
+    }
+
+    .info_r {
+        width: 500px;
+    }
+
+    .info_r div {
+        float: left;
+        width: 100px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .info_mr {
+        margin-top: 150px;
+        width: 500px;
+
+    }
+
+    .info_mr div {
+        width: 100px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /** 报销管理 **/
+    .apply_div1 {
+        width: 90%;
+        float: right;
+    }
+
+    .apply_div1 .id {
+        color: #ff0000;
+    }
+
+    .apply_div1 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div1 .ul1 li {
+        width: 9%;
+        float: left;
+        margin-left: 2%;
+        line-height: 24px;
+        font-size: 180%;;
+        height: 120%;
+    }
+
+    .apply_div1 .ul2 li {
+        width: 10%;
+        float: left;
+        font-size: 14px;
+        margin-left: 1%;
+        line-height: 30px;
+        height: 150%;
+    }
+
+    .apply_div2 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div2 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div2 .ul2 li {
+        cursor: pointer;
+        width: 8%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div2 .dul1 li {
+        cursor: pointer;
+        width: 12%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div2 img {
+        margin-left: 10%;
+        width: 50%;
+    }
+
+    .apply_div3 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div3 .id {
+        color: #ff0000;
+        cursor:pointer;
+    }
+
+    .apply_div3 .u1 {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div3 ul {
+        width: 100%;
+    }
+
+    .apply_div3 .u1 li {
+        width: 12%;
+        float: left;
+        margin-left: 6%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div3 .u2 .hand {
+        cursor: pointer;
+    }
+
+    .apply_div3 .u2 li {
+        font-size: 14px;
+        width: 12%;
+        float: left;
+        line-height: 20px;
+        margin-left: 6%;
+        height: 40px;
+    }
+
+    .apply_div4 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div4 .next_page {
+        float: right;
+        padding-top: 5%;
+        font-size: 24px;
+        margin-left: 15%;
+        margin-right: 10%;
+        cursor: pointer;
+    }
+
+    .apply_div4 .imgc {
+        float: left;
+        margin-top: 3%;
+        margin-left: 1%;
+        width: 25%;
+        height: 500px;
+    }
+
+    .apply_div4 .imgc2 {
+        width: 40%;
+        float: left;
+        margin-left: 1%;
+        margin-top: 10%;
+    }
+
+    .apply_div4 .imgc3 {
+        margin-top: 10%;
+    }
+
+    .apply_div4 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div4 .u2 .nu {
+        both: clear;
+        float: left;
+        margin-right: 20%;
+        width: 80%;
+    }
+
+    .apply_div4 .nu li {
+        float: left;
+        margin-left: 10%;
+        font-size: 18px;
+    }
+
+    .apply_div4 ul .rid {
+        width: 30%;
+        font-size: 16px;
+        height: 25px;
+        margin-left: 50%;
+
+    }
+
+    .apply_div4 .u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .u2 .nl li {
+        font-size: 160%;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+
+    }
+
+    .apply_div4 .nli {
+        font-size: 200%;;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .apply_div4 .u2 .ub {
+        cursor: pointer;
+        width: 100%;
+        float: left;
+    }
+
+    .apply_div4 .u2 .ub .lis {
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .u2 .ub .rid {
+        float: right;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 {
+        display: none;
+    }
+
+    .apply_div4 .hc_u2 ul {
+        width: 58%;
+        float: right;
+    }
+
+    .apply_div4 .hc_u2 .nu{
+        width:100%;
+    }
+
+    .apply_div4 .hc_u2 .ub {
+        cursor: pointer;
+        width: 80%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .hc_u2 .ub .lis {
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 .ub .rid {
+        float: right;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 .nli {
+        font-size: 200%;
+        text-align: left;
+        color: #00bfff;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-right: 36%;
+        float: right;
+    }
+
+    .apply_div4 .fj_u2 {
+        display: none;
+    }
+
+    .apply_div4 .fj_u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .fj_u2 .nli {
+        font-size: 28px;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .apply_div4 .fj_u2 .ub {
+        cursor: pointer;
+        width: 80%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .fj_u2 .ub .lis {
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .fj_u2 .ub .rid {
+        float: right;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_sm {
+        float: left;
+        width: 60%;
+        height: 200px;
+        font-size: 16px;
+        display: none;
+    }
+
+    .apply_dsm {
+        float: left;
+        width: 60%;
+        height: 200px;
+        font-size: 16px;
+        display: none;
+    }
+
+    .apply_sm .save {
+        margin-top: 20%;
+        float: right;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    /**  票据管理  **/
+    /***  人员管理  ***/
+    .m_div {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .m_div ul li {
+        font-size: 20px;
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        cursor: pointer;
+
+    }
+
+    .m_div .u2 {
+        margin-left: 10%;
+        width: 40%;
+        height: 30px;
+    }
+
+    .m_div .u2 div{
+        float: right;
+        font-size:200%;
+        cursor: pointer;
+    }
+
+    .m_div .u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .m_div .u2 li {
+        font-size: 200%;
+        text-align: left;
+        color: #00bfff;
+        width: 120%;
+        margin-left: 3%;
+        line-height: 150%;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .m_div .sty2_u2 {
+        float: right;
+        display: none;
+        width: 92%;
+
+    }
+
+    .m_div .sty2_u2 li {
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 90%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 2%;
+    }
+
+    .m_div .sty2_u2 .s1 {
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 7%;
+        line-height: 30px;
+    }
+
+    .m_div .sty2_u2 .s2 {
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 12%;
+        margin-left: 1%;
+        line-height: 30px;
+    }
+
+    .m_div .sty3_u2 {
+        display: none;
+        margin-left: 10%;
+        width: 60%;
+        height: 30px;
+    }
+
+    .m_div .sty3_u2 .yesc{
+        margin-left:60%;
+    }
+
+    .m_div .sty3_u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .m_div .sty3_u2 li {
+        font-size: 24px;
+        text-align: left;
+        color: #00bfff;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 180%;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 5%;
+        padding-left: 2%;
+    }
+
+    .m_div .sty3_u2 .mem_select{
+        float: right;
+        margin-top:0.5%;
+        width: 40%;
+    }
+    .m_div .sty3_u2 .subPadd {
+        cursor: pointer;
+        font-size: 200%;
+        padding-top:78%;
+        padding-left:55%;
+    }
+
+    /** 报销设置 **/
+    .as_div {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .as_div img {
+        clear: both;
+        /*float:right;*/
+        /*margin-left:50%;*/
+        width: 5%;
+    }
+
+    .as_div ul li {
+        font-size: 20px;
+        width: 7%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        cursor: pointer;
+
+    }
+
+    .as_div .as_u1 {
+        float: right;
+        width: 40%;
+        margin-right: 50%;
+
+    }
+
+    .as_div .as_u1 li {
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 100%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 7%;
+    }
+
+    .as_div .as_u1 .s1 {
+        /*padding-right: 50%;*/
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 70%;
+        line-height: 30px;
+    }
+
+    .as_div .as_u1 .s3{
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 100%;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .as_div .as_u1 .s1 .sp1{
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 40%;
+        text-align: left;
+        margin: 0px;
+    }
+
+    .as_div .as_u1 .s1 .sp2{
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 1%;
+
+        margin: 0px auto;
+        margin-top: 1%;
+    }
+
+    .as_div .as_u1 .ss2{
+        width:30%;
+        font-size: 20px;
+        float: right;
+        color: #00bfff;
+        margin: 0px auto;
+    }
+
+    .as_div .as_u1 .s2 {
+        text-align: left;
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 1%;
+        margin-top: 1%;
+        line-height: 20px;
+    }
+
+    .as_div .as_u2 {
+        float: right;
+        display: none;
+        width: 40%;
+        margin-right: 50%;
+
+    }
+
+    .as_div .as_u2 li {
+        text-align: left;
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 90%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 7%;
+    }
+
+    .as_div .as_u2 .s1 {
+        padding-right: 50%;
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 100%;
+        line-height: 30px;
+    }
+
+    .as_div .as_u2 .s1 input {
+        width: 50%;
+    }
+
+    .as_div .as_u2 .s2 {
+        text-align: left;
+        font-size: 20px;
+        float: right;
+        color: #00bfff;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: -5%;
+    }
+
+    .as_div .as_u2 .s3 {
+        text-align: right;
+        font-size: 20px;
+        float: right;
+        color: #00bfff;
+        width: 60%;
+        margin-top: -5%;
+        margin-right: 20%;
+    }
+
+    .v_table {
+        font-size:200%;
+    }
+
+}
+
+/*分辨率小于980 大于 768*/
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    li {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .click_hand {
+        cursor: pointer;
+    }
+
+    .m_div input {
+        border: 0px;
+    }
+
+    .as_div input {
+        border: 0px;
+    }
+
+    .apply_div4 input {
+        border: 0px;
+    }
+
+    .page {
+        float: left;
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    /*首页 信息管理*/
+    .info_div {
+        width: 500px;
+        margin-left: 30%;
+    }
+
+    .info_div div {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .info_rd {
+        font-size: 26px;
+        width: 300px;
+        float: right;
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .info_mrd {
+        font-size: 26px;
+        width: 300px;
+        float: right;
+        margin-top: -50px;
+        margin-right: 250px;
+    }
+
+    .info_r {
+        width: 500px;
+    }
+
+    .info_r div {
+        float: left;
+        width: 100px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .info_mr {
+        margin-top: 150px;
+        width: 500px;
+
+    }
+
+    .info_mr div {
+        width: 100px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /** 报销管理 **/
+    .apply_div1 {
+        width: 90%;
+        float: right;
+    }
+
+    .apply_div1 .id {
+        color: #ff0000;
+    }
+
+    .apply_div1 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div1 .ul1 li {
+        width: 9%;
+        float: left;
+        margin-left: 2%;
+        line-height: 24px;
+        font-size: 180%;;
+        height: 120%;
+    }
+
+    .apply_div1 .ul2 li {
+        width: 10%;
+        float: left;
+        font-size: 14px;
+        margin-left: 1%;
+        line-height: 30px;
+        height: 150%;
+    }
+
+    .apply_div2 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div2 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div2 .ul2 li {
+        cursor: pointer;
+        width: 8%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div2 .dul1 li {
+        cursor: pointer;
+        width: 12%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 120%;;
+    }
+
+    .apply_div2 img {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .apply_div3 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div3 .id {
+        color: #ff0000;
+    }
+
+    .apply_div3 .u1 {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div3 ul {
+        width: 100%;
+    }
+
+    .apply_div3 .u1 li {
+        width: 12%;
+        float: left;
+        margin-left: 6%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div3 .u2 .hand {
+        cursor: pointer;
+    }
+
+    .apply_div3 .u2 li {
+        font-size: 14px;
+        width: 12%;
+        float: left;
+        line-height: 20px;
+        margin-left: 6%;
+        height: 40px;
+    }
+
+    .apply_div4 {
+        width: 90%;
+        float: right;
+        display: none;
+    }
+
+    .apply_div4 .next_page {
+        float: right;
+        padding-top: 5%;
+        font-size: 24px;
+        margin-left: 15%;
+        margin-right: 10%;
+        cursor: pointer;
+    }
+
+    .apply_div4 .imgc {
+        float: left;
+        margin-top: 3%;
+    }
+
+    .apply_div4 .imgc2 {
+        width: 35%;
+        float: left;
+        margin-left: 1%;
+        margin-top: 10%;
+    }
+
+    .apply_div4 .imgc3 {
+        margin-top: 10%;
+    }
+
+    .apply_div4 ul {
+        width: 100%;
+        height: 30px;
+    }
+
+    .apply_div4 .u2 .nu {
+        both: clear;
+        float: left;
+        margin-right: 20%;
+        width: 80%;
+    }
+
+    .apply_div4 .nu li {
+        float: left;
+        margin-left: 10%;
+        font-size: 18px;
+    }
+
+    .apply_div4 ul .rid {
+        width: 30%;
+        font-size: 16px;
+        height: 25px;
+        margin-left: 50%;
+
+    }
+
+    .apply_div4 .u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .u2 .nl li {
+        font-size: 120%;;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+
+    }
+
+    .apply_div4 .nli {
+        font-size: 120%;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+        height: 70px;
+    }
+
+    .apply_div4 .u2 .ub {
+        cursor: pointer;
+        width: 100%;
+        float: left;
+    }
+
+    .apply_div4 .u2 .ub .lis {
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .u2 .ub .rid {
+        float: right;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 {
+        display: none;
+    }
+
+    .apply_div4 .hc_u2 ul {
+        width: 58%;
+        float: right;
+    }
+
+    .apply_div4 .hc_u2 .ub {
+        cursor: pointer;
+        width: 80%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .hc_u2 .ub .lis {
+        width: 10%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 .ub .rid {
+        float: right;
+        width: 60%;
+        margin-left: 3%;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+    .apply_div4 .hc_u2 .nli {
+        font-size: 100%;
+        text-align: left;
+        color: #00bfff;
+        width: 65%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-right: 36%;
+        float: right;
+    }
+
+    .apply_div4 .fj_u2 {
+        display: none;
+    }
+
+    .apply_div4 .fj_u2 ul {
+        width: 40%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .apply_div4 .fj_u2 li {
+        font-size: 28px;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .apply_sm {
+        float: left;
+        width: 60%;
+        height: 200px;
+        font-size: 16px;
+        display: none;
+    }
+
+    .apply_dsm {
+        float: left;
+        width: 60%;
+        height: 200px;
+        font-size: 16px;
+        display: none;
+    }
+
+    .apply_sm .save {
+        margin-top: 20%;
+        float: right;
+        margin-right: 5%;
+        font-size: 18px;
+    }
+
+    /**  票据管理  **/
+    /***  人员管理  ***/
+    .m_div {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .m_div ul li {
+        font-size: 120%;
+        width: 7%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        cursor: pointer;
+
+    }
+
+    .m_div .u2 {
+        margin-left: 10%;
+        width: 80%;
+        height: 30px;
+    }
+
+    .m_div .u2 .subPositon {
+        cursor: pointer;
+        padding-top: 80%;
+        font-size:200%;
+        margin-left: 85%;
+    }
+
+    .m_div .u2 ul {
+        width: 80%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .m_div .u2 li {
+        font-size: 24px;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 150%;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .m_div .sty2_u2 {
+        float: right;
+        display: none;
+        width: 92%;
+
+    }
+
+    .m_div .sty2_u2 li {
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 90%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 2%;
+    }
+
+    .m_div .sty2_u2 .s1 {
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 7%;
+        line-height: 30px;
+    }
+
+    .m_div .sty2_u2 .s2 {
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 12%;
+        margin-left: 1%;
+        line-height: 30px;
+    }
+
+    .m_div .sty3_u2 {
+        display: none;
+        margin-left: 10%;
+        width: 80%;
+        height: 30px;
+    }
+
+    .m_div .sty3_u2 ul {
+        width: 100%;
+        float: right;
+        margin-right: 20%;
+    }
+
+    .m_div .sty3_u2 li {
+        font-size: 24px;
+        text-align: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 3%;
+        line-height: 40px;
+        cursor: pointer;
+        border: 1px dashed #ff0000;
+        margin-top: 8%;
+        padding-left: 2%;
+    }
+
+    .m_div .sty3_u2 .mem_select{
+        float: right;
+        margin-top:0.5%;
+        width: 40%;
+    }
+
+    /** 报销设置 **/
+    .as_div {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .as_div img {
+        clear: both;
+        /*float:right;*/
+        /*margin-left:50%;*/
+        width: 5%;
+    }
+
+    .as_div ul li {
+        font-size: 20px;
+        width: 7%;
+        float: left;
+        margin-left: 3%;
+        line-height: 24px;
+        cursor: pointer;
+
+    }
+
+    .as_div .as_u1 {
+        float: right;
+        width: 40%;
+        margin-right: 50%;
+
+    }
+
+    .as_div .as_u1 li {
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 150%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 7%;
+    }
+
+    .as_div .as_u1 .s1 {
+        text-align: left;
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 80%;
+        line-height: 30px;
+    }
+
+    .as_div .as_u1 .s1 .sp1{
+        both:clear;
+        text-align: left;
+        color: #00bfff;
+        font-size: 100%;
+        float: left;
+        position:absolute;
+        left:95px;
+    }
+
+    .as_div .as_u1 .s1 .sp2{
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 40%;
+        margin: 0px auto;
+        margin-top: 1%;
+        margin-left: 40%;
+    }
+
+
+
+    .as_div .as_u1 .s2 {
+        text-align: left;
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        width: 80%;
+        margin-left: 1%;
+        margin-top: 1%;
+    }
+
+    .as_div .as_u1 .s3 {
+        font-size: 20px;
+        float: left;
+        color: #00bfff;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .as_div .as_u2 {
+        float: right;
+        display: none;
+        width: 40%;
+        margin-right: 50%;
+
+    }
+
+    .as_div .as_u2 li {
+        text-align: left;
+        border: 1px dashed #ff0000;
+        font-size: 20px;
+        clear: both;
+        color: #00bfff;
+        width: 90%;
+        margin-left: 3%;
+        line-height: 30px;
+        margin-top: 7%;
+    }
+
+    .as_div .as_u2 .s1 input {
+        width: 50%;
+    }
+
+}
+
+
+
+
+
+
+
+

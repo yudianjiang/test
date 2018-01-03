@@ -1,0 +1,17 @@
+/**  报销设置底部CSS  **/
+.foot_bx{
+    cursor: pointer;
+    display: none;
+    width:80%;
+    font-size: 30px;
+    margin-top:30%;
+    margin-left:20%;
+}
+
+.next_page {
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    float: right;
+    margin-right:10%;
+}

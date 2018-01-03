@@ -83,6 +83,10 @@ Class Information
         }
     }
 
+    public function seeStatus(){
+        echo 123;die;
+    }
+
 
 
 

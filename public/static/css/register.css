@@ -1,0 +1,95 @@
+/*登录页*/
+body {
+    margin：0 auto;
+    padding：0;
+}
+.background {
+    clear:both;
+    background: #2a6496;
+    width:100%;
+    height:670px;
+    margin-top:0px;
+}
+
+.p1 {
+    font-size: 32px;
+    padding-top:50px;
+    color:white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    color:#ffff00;
+    text-align: center;
+}
+
+.div1 {
+    width:460px;
+    height:200px;
+    margin:70px auto;
+    border:1px solid #4F4F4F;
+    background-color: #4F4F4F;
+}
+
+.div2 {
+    width:430px;
+    height:170px;
+    margin:13px auto;
+    background-color: 	#ADADAD;
+}
+
+.div3 {
+    font-size:16px;
+    width:280px;
+    height:70px;
+    margin-top:30px;
+    margin-left:40px;
+    float:left;
+}
+
+.div4 {
+    width:70px;
+    height:70px;
+    margin-top:30px;
+    margin-right:40px;
+    float:right;
+    font-size:18px;
+    background-color:#FFC0CB;
+}
+
+.fp1 {
+    text-align: center;
+    font-size:18px;
+}
+
+.fp2 {
+    text-align: center;
+    font-size:18px;
+}
+
+.d1 {
+    margin:6px auto;
+}
+
+.d2 {
+    margin:7px auto;
+}
+
+.p2 {
+    margin-right:8px;
+}
+
+.p3 {
+    margin-left:0px;
+    margin-right:7px;
+}
+
+.fdiv {
+    width:180px;
+    height:40px;
+}
+
+.cb{
+    margin-left:30px;
+}

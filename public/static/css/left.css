@@ -1,0 +1,370 @@
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .l_bdiv {
+        float: left;
+    }
+
+    .l_div1 {
+        border: 2px solid #DCDCDC;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+    }
+
+    .l_div1 {
+        width: 100%;
+        height: 26px;
+    }
+
+    /*.centerdiv{*/
+    /*margin-left:38px;*/
+    /*float:left;*/
+    /*width:44px;*/
+    /*border-right: 2px solid #DCDCDC;*/
+    /*padding-bottom:1600px;  !*关键*!*/
+    /*margin-bottom:-1600px;  !*关键*!*/
+    /*}*/
+    .l_span1 {
+        cursor: pointer;
+        float: left;
+        width: 49%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+
+    .l_span2 {
+        cursor: pointer;
+        float: left;
+        width: 49%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .l_bdiv {
+        border: 2px solid #DCDCDC;
+        height: 820px;
+        width: 20%;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    /*部门  课题组  姓名*/
+    .bdiv {
+        cursor: pointer;
+        line-height: 20px;
+
+        text-align: center;
+    }
+
+    .bdiv p {
+        /*line-height: 60%;;*/
+        overflow: hidden;
+    }
+
+    .bdiv .ove {
+        font-size: 100%;
+
+    }
+
+    .bdiv .cdiv {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .bdiv .cdiv ndiv {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 30px;
+    }
+
+    .cdiv p {
+        font-size: 60%;
+        overflow: hidden;
+    }
+
+    .db_n {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /**  只有 《目录》 的左边公共部分 **/
+    .f_span1 {
+        text-align: center;
+        font-size: 20px;
+        border: 2px solid #DCDCDC;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+    }
+
+    /**  报销设置 的左边公共部分 **/
+    .as_ul {
+        /*float: left;*/
+        width: 100%;
+        height: 100px;
+    }
+
+    .as_ul li {
+        cursor: pointer;
+        float: left;
+        width: 90%;
+        font-size: 100%;
+        line-height: 30px;
+    }
+
+    /**  智能查询 **/
+    .cap_tdiv {
+        width:100%;
+        height:80px;
+    }
+
+    .capDiv {
+        float: left;
+        width:35%;
+    }
+
+    .capImg{
+        position: absolute;
+        left: 80%;
+        top: 10%;
+        float: right;
+        margin-left:10%;
+        z-index:2;
+    }
+
+    .capImg img {
+        width: 100%;
+    }
+
+    .caSpan {
+        cursor: pointer;
+        float: left;
+        width: 99%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+
+    .cap_Ldiv {
+        float:left;
+        width:40%;
+        font-size: 200%;
+        text-align: left;
+    }
+
+    .cap_lastdiv{
+        width:100%;
+    }
+
+    .cap_lastdiv img{
+        margin-left:2%;
+        width:15%;
+    }
+
+    .cap_rdiv{
+        float: right;
+        width:40%;
+        font-size: 200%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 980px) {
+    .l_bdiv {
+        float: left;
+    }
+
+    .l_div1 {
+        border: 2px solid #DCDCDC;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+    }
+
+    .l_div1 {
+        width: 100%;
+        height: 26px;
+    }
+
+    /*.centerdiv{*/
+    /*margin-left:38px;*/
+    /*float:left;*/
+    /*width:44px;*/
+    /*border-right: 2px solid #DCDCDC;*/
+    /*padding-bottom:1600px;  !*关键*!*/
+    /*margin-bottom:-1600px;  !*关键*!*/
+    /*}*/
+    .l_span1 {
+        cursor: pointer;
+        float: left;
+        width: 49%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+
+    .l_span2 {
+        cursor: pointer;
+        float: left;
+        width: 49%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .l_bdiv {
+        border: 2px solid #DCDCDC;
+        height: 820px;
+        width: 10%;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    /*部门  课题组  姓名*/
+    .bdiv {
+        cursor: pointer;
+        line-height: 20px;
+
+        text-align: center;
+    }
+
+    .bdiv p {
+        line-height: 40px;
+        overflow: hidden;
+    }
+
+    .bdiv .ove {
+        font-size: 16px;
+        height: 50px;
+
+    }
+
+    .bdiv .cdiv {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .bdiv .cdiv ndiv {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 30px;
+    }
+
+    .cdiv p {
+        font-size: 14px;
+        overflow: hidden;
+    }
+
+    .db_n {
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /**  只有 《目录》 的左边公共部分 **/
+    .f_span1 {
+        text-align: center;
+        font-size: 20px;
+        border: 2px solid #DCDCDC;
+        border-right-color: #DCDCDC;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+    }
+
+    /**  报销设置 的左边公共部分 **/
+    .as_ul {
+        /*float: left;*/
+        width: 100%;
+        height: 100px;
+    }
+
+    .as_ul li {
+        cursor: pointer;
+        float: left;
+        width: 90%;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    /**  智能查询 **/
+    .cap_tdiv {
+        width:100%;
+        height:80px;
+    }
+
+    .capDiv {
+        float: left;
+        width:20%;
+    }
+
+    .capImg{
+        position: absolute;
+        left: 80%;
+        top: 10%;
+        float: right;
+        margin-left:10%;
+        z-index:2;
+    }
+
+    .capImg img {
+        width: 100%;
+    }
+
+    .caSpan {
+        cursor: pointer;
+        float: left;
+        width: 99%;
+        height: 24px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+
+    .cap_Ldiv {
+        float: left;
+        width:20%;
+        font-size: 200%;
+        text-align: left;
+    }
+
+    .cap_lastdiv{
+        width:100%;
+    }
+
+    .cap_lastdiv img{
+        margin-left:2%;
+        width:15%;
+    }
+
+    .cap_rdiv{
+        float: right;
+        width:20%;
+        font-size: 200%;
+        text-align: center;
+    }
+
+}
